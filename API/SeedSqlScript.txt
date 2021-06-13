@@ -1,0 +1,57 @@
+SET IDENTITY_INSERT [dbo].[Customers] ON
+GO
+INSERT [dbo].[Customers] (Id, Name) VALUES(1, N'Jennifer Acosta')
+GO
+INSERT [dbo].[Customers] (Id, Name) VALUES(2, N'Stephen Gardner')
+GO
+INSERT [dbo].[Customers] (Id, Name) VALUES(3, N'Hector Graves')
+GO
+INSERT [dbo].[Customers] (Id, Name) VALUES(4, N'Ava Rodriguez')
+GO
+INSERT [dbo].[Customers] (Id, Name) VALUES(5, N'Carlos Howell')
+GO
+INSERT [dbo].[Customers] (Id, Name) VALUES(6, N'Louis Berry')
+GO
+INSERT [dbo].[Customers] (Id, Name) VALUES(7, N'James Sutton')
+GO
+INSERT [dbo].[Customers] (Id, Name) VALUES(8, N'Wilma Castro')
+GO
+INSERT [dbo].[Customers] (Id, Name) VALUES(9, N'Dale Moreno')
+GO
+INSERT [dbo].[Customers] (Id, Name) VALUES(10, N'Kirk Holland')
+GO
+INSERT [dbo].[Customers] (Id, Name) VALUES(11, N'Sebastian Welch')
+GO
+INSERT [dbo].[Customers] (Id, Name) VALUES(12, N'Nelson Weaver')
+GO
+SET IDENTITY_INSERT [dbo].[Customers] OFF
+GO
+SET IDENTITY_INSERT [dbo].[FoodItems] ON
+GO
+INSERT [dbo].[FoodItems] (Id, Name, Price) VALUES(1, N'Chicken Tenders', CAST(3.50 AS DECIMAL(18,2)))
+GO
+INSERT [dbo].[FoodItems] (Id, Name, Price) VALUES(2, N'Chicken Tenders w/ Fries', CAST(4.99 AS DECIMAL(18,2)))
+GO
+INSERT [dbo].[FoodItems] (Id, Name, Price) VALUES(3, N'Chicken Tenders w/ Onion', CAST(4.50 AS DECIMAL(18,2)))
+GO
+INSERT [dbo].[FoodItems] (Id, Name, Price) VALUES(4, N'Grilled Cheese Sandwich', CAST(4.12 AS DECIMAL(18,2)))
+GO
+INSERT [dbo].[FoodItems] (Id, Name, Price) VALUES(5, N'Grilled Cheese Sandwich w/ Fries', CAST(5.50 AS DECIMAL(18,2)))
+GO
+INSERT [dbo].[FoodItems] (Id, Name, Price) VALUES(6, N'Grilled Cheese Sandwich w/ Onion', CAST(5.12 AS DECIMAL(18,2)))
+GO
+INSERT [dbo].[FoodItems] (Id, Name, Price) VALUES(7, N'Lettuce and Tomato Burger', CAST(4.10 AS DECIMAL(18,2)))
+GO
+INSERT [dbo].[FoodItems] (Id, Name, Price) VALUES(8, N'Lettuce and Tomato Burger w/ Fries', CAST(5.60 AS DECIMAL(18,2)))
+GO
+INSERT [dbo].[FoodItems] (Id, Name, Price) VALUES(9, N'Lettuce and Tomato Burger w/ Onion', CAST(5.40 AS DECIMAL(18,2)))
+GO
+INSERT [dbo].[FoodItems] (Id, Name, Price) VALUES(10, N'Beef Burger', CAST(3.99 AS DECIMAL(18,2)))
+GO
+INSERT [dbo].[FoodItems] (Id, Name, Price) VALUES(11, N'Beef Burger w/ Fries', CAST(4.20 AS DECIMAL(18,2)))
+GO
+INSERT [dbo].[FoodItems] (Id, Name, Price) VALUES(12, N'Beef Burger w/ Onion', CAST(4.15 AS DECIMAL(18,2)))
+GO
+INSERT [dbo].[FoodItems] (Id, Name, Price) VALUES(13, N'French Fries', CAST(1.50 AS DECIMAL(18,2)))
+GO
+SET IDENTITY_INSERT [dbo].[FoodItems] OFF
