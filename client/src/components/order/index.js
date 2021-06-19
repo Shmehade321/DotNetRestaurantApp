@@ -1,6 +1,9 @@
-import React from 'react'
-import OrderForm from './OrderForm'
+import React from "react";
+import OrderForm from "./OrderForm";
 import { useForm } from "../../hooks/useForm";
+import { Grid } from "@material-ui/core";
+import SearchFoodItems from "./SearchFoodItems";
+import OrderFoodItems from "./OrderFoodItems";
 
 const generateOrderNumber = () =>
   Math.floor(100000 + Math.random() * 900000).toString();
@@ -16,19 +19,44 @@ const initialOrderForm = () => ({
 });
 
 const Order = () => {
+  const {
+    values,
+    setValues,
+    errors,
+    setErros,
+    handleInputChanges,
+    resetFormControls,
+  } = useForm(initialOrderForm);
 
-    const {
-        values,
-        setValues,
-        errors,
-        setErros,
-        handleInputChanges,
-        resetFormControls,
-      } = useForm(initialOrderForm);
+  const addFoodItem = (foodItem) => {
+    let x = {
+      id: 0,
+      orderId: values.id,
+      foodItemId: foodItem.id,
+      quantity: 1,
+      foodItemPrice: foodItem.foodItemPrice,
+      foodItemName: foodItem.name,
+    };
 
-    return (
-        <OrderForm {...{values, errors, handleInputChanges}} />
-    )
-}
+    setValues({
+      ...values,
+      orderDetails: [...values.orderDetails, x],
+    });
+  };
 
-export default Order
+  return (
+    <Grid container spacing={2}>
+      <Grid item xs={12}>
+        <OrderForm {...{ values, errors, handleInputChanges }} />
+      </Grid>
+      <Grid item xs={6}>
+        <SearchFoodItems {...{ addFoodItem }} />
+      </Grid>
+      <Grid item xs={6}>
+        <OrderFoodItems {...{ orderedFoodItems: values.orderDetails }} />
+      </Grid>
+    </Grid>
+  );
+};
+
+export default Order;
